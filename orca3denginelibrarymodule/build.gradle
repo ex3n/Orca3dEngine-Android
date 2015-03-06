@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets.main {
+        jni.srcDirs = []
+        jniLibs.srcDir 'src/main/libs'
+    }
+    task buildNative(type: Exec, description: 'Compile JNI source via NDK') {
+        def ndkDir = '/Users/joelhansen/development/androidsdk/ndk'
+        commandLine "$ndkDir/ndk-build",
+                '-C', file('src/main').absolutePath,
+                '-j', Runtime.runtime.availableProcessors(),
+                // 'all',
+                'V=1',
+                '-B'
+    }
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn buildNative
+    }
+    dependencies {
+
+
+        compile files('libs/dd-plist.jar')
+        compile 'com.android.support:support-v4:21.0.3'
+        compile "com.android.support:appcompat-v7:18.0.+"
+    }
+    productFlavors {
+    }
+}
+dependencies {
+}

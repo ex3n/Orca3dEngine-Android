@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>podFile</key>
+	<string>dental.pod</string>
+	<key>fxFile</key>
+	<string>dental.fx</string>
+	<key>Layers</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Full Jaw</string>
+			<key>visible</key>
+			<true/>
+			<key>labelsVisible</key>
+			<false/>
+			<key>nodeNameSubstrings</key>
+			<array>
+				<string>fulljaw</string>
+			</array>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Top Jaw</string>
+			<key>visible</key>
+			<false/>
+			<key>labelsVisible</key>
+			<false/>
+			<key>nodeNameSubstrings</key>
+			<array>
+				<string>topjaw</string>
+				<string>upperjaw</string>
+			</array>
+			<key>excludeNodeNameSubstrings</key>
+			<array>
+				<string>annotation_crosssection</string>
+				<string>crosssection_upperjaw_rear_geo</string>
+			</array>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Bottom Jaw</string>
+			<key>visible</key>
+			<false/>
+			<key>labelsVisible</key>
+			<false/>
+			<key>nodeNameSubstrings</key>
+			<array>
+				<string>bottomjaw</string>
+				<string>lowerjaw</string>
+			</array>
+			<key>excludeNodeNameSubstrings</key>
+			<array>
+				<string>annotation_crosssection</string>
+				<string>crosssection_lowerjaw_rear_geo</string>
+			</array>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Cutaway Full Jaw</string>
+			<key>visible</key>
+			<false/>
+			<key>labelsVisible</key>
+			<false/>
+			<key>nodeNameSubstrings</key>
+			<array>
+				<string>crosssection_upperjaw</string>
+				<string>crosssection_bottomjaw</string>
+				<string>crosssection_lowerjaw</string>
+			</array>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Cutaway Top Jaw</string>
+			<key>visible</key>
+			<false/>
+			<key>labelsVisible</key>
+			<false/>
+			<key>nodeNameSubstrings</key>
+			<array>
+				<string>crosssection_upperjaw</string>
+			</array>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Cutaway Bottom Jaw</string>
+			<key>visible</key>
+			<false/>
+			<key>labelsVisible</key>
+			<false/>
+			<key>nodeNameSubstrings</key>
+			<array>
+				<string>crosssection_bottomjaw</string>
+				<string>crosssection_lowerjaw</string>
+			</array>
+		</dict>
+	</array>
+	<key>Zoom</key>
+	<dict>
+		<key>scale</key>
+		<real>0.66</real>
+		<key>min</key>
+		<real>0.5</real>
+		<key>max</key>
+		<integer>5</integer>
+	</dict>
+	<key>Pan</key>
+	<dict>
+		<key>scale</key>
+		<integer>50</integer>
+	</dict>
+	<key>LightScale</key>
+	<real>0.8</real>
+	<key>Labels</key>
+	<dict>
+		<key>scale</key>
+		<integer>20</integer>
+	</dict>
+	<key>Views</key>
+	<array>
+		<dict>
+			<key>Name</key>
+			<string>3D Full Jaw</string>
+			<key>InitialState</key>
+			<dict>
+				<key>curLayer</key>
+				<string>Full Jaw</string>
+			</dict>
+			<key>Layers</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Full Jaw</string>
+					<key>ShowLayers</key>
+					<array>
+						<string>Full Jaw</string>
+					</array>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Cutaway Full Jaw</string>
+					<key>ShowLayers</key>
+					<array>
+						<string>Cutaway Full Jaw</string>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>3D Top Jaw</string>
+			<key>InitialState</key>
+			<dict>
+				<key>curLayer</key>
+				<string>Top Jaw</string>
+			</dict>
+			<key>Layers</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Top Jaw</string>
+					<key>ShowLayers</key>
+					<array>
+						<string>Top Jaw</string>
+					</array>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Cutaway Top Jaw</string>
+					<key>ShowLayers</key>
+					<array>
+						<string>Cutaway Top Jaw</string>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>3D Bottom Jaw</string>
+			<key>InitialState</key>
+			<dict>
+				<key>curLayer</key>
+				<string>Bottom Jaw</string>
+			</dict>
+			<key>Layers</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Bottom Jaw</string>
+					<key>ShowLayers</key>
+					<array>
+						<string>Bottom Jaw</string>
+					</array>
+				</dict>
+				<dict>
+					<key>Name</key>
+					<string>Cutaway Bottom Jaw</string>
+					<key>ShowLayers</key>
+					<array>
+						<string>Cutaway Bottom Jaw</string>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

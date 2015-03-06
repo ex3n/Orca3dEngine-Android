@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.orca.orca3denginelibrarymodule">
+
+    <application android:allowBackup="true" android:label="@string/app_name">
+       <activity android:name=".Orca3DEngineActivity">
+
+       </activity>
+
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Orca3dEngine-Android</string>
+    <string name="title_activity_start_list">StartList</string>
+    <string name="modelLabel">Model</string>
+    <string name="title_activity_view_list">ViewList</string>
+    <string name="action_settings">Settings</string>
+</resources>

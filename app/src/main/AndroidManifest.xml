@@ -1,0 +1,26 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.orca.orca3dengine_android">
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher" android:theme="@style/AppTheme">
+        <activity
+            android:name="com.orca.orca3dengine_android.StartList"
+            android:label="@string/title_activity_start_list" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.orca.orca3dengine_android.ViewList"
+            android:label="@string/title_activity_view_list"
+            android:parentActivityName="com.orca.gl2jni.StartList" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.orca.orca3dengine_android.StartList" />
+        </activity>
+
+    </application>
+
+</manifest>
